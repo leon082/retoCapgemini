@@ -38,7 +38,7 @@ public class TransactionServices {
         Pageable p = PageRequest.of(0, limit);
         result = transactionRepository.lastTransaction(customerId, productNumber, p);
         
-        System.out.println("Cuantos consulto..."+ result);
+        
          
          result.stream().map((itemFound) -> {
              TransactionDTO dto = new TransactionDTO();
