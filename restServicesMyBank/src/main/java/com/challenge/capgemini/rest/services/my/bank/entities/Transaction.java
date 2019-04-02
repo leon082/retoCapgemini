@@ -168,7 +168,9 @@ public class Transaction implements Serializable {
 
     @Override
     public String toString() {
-        return "javaapplication29.Transaction[ id=" + id + " ]";
+        return "Transaction{" + "id=" + id + ", amount=" + amount + ", date=" + date + ", status=" + status + ", transactionNumber=" + transactionNumber + ", channelId=" + channelId + ", customerProductId=" + customerProductId + ", type=" + type + '}';
     }
+
+    
     
 }

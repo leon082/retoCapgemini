@@ -5,17 +5,19 @@
  */
 package com.challenge.capgemini.rest.services.my.bank.repository;
 
-import com.challenge.capgemini.rest.services.my.bank.entities.Customer;
+import com.challenge.capgemini.rest.services.my.bank.entities.CustomerProduct;
+import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
 /**
  *
- * @author Luis Leon
+ * @author LuisLeon
  */
-public interface CustomerRepository extends PagingAndSortingRepository<Customer, Integer>{
-    	@Query(value = "FROM Customer u WHERE u.customerId = :customerId")
-    Customer findByCustomerID(@Param("customerId") String customerId);
-   
+public interface CustomerProductRepository extends PagingAndSortingRepository<CustomerProduct, Integer>{
+    
+    @Query(value ="from CustomerProduct cp where cp.customerId.customerId = :customerId")
+    List<CustomerProduct> findByCustomerId( @Param("customerId") String customerId);
+    
 }

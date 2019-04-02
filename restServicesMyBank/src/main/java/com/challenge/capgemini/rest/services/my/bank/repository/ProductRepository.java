@@ -6,16 +6,13 @@
 package com.challenge.capgemini.rest.services.my.bank.repository;
 
 import com.challenge.capgemini.rest.services.my.bank.entities.Customer;
-import org.springframework.data.jpa.repository.Query;
+import com.challenge.capgemini.rest.services.my.bank.entities.Product;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.repository.query.Param;
 
 /**
  *
- * @author Luis Leon
+ * @author LuisLeon
  */
-public interface CustomerRepository extends PagingAndSortingRepository<Customer, Integer>{
-    	@Query(value = "FROM Customer u WHERE u.customerId = :customerId")
-    Customer findByCustomerID(@Param("customerId") String customerId);
-   
+public interface ProductRepository extends PagingAndSortingRepository<Product, Integer>{
+    
 }
